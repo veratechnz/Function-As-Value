@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<h1>Functions As Values</h1>
+	<script>
+	// var passengers = [
+	// 	{name: 'Jane Doloop', paid: true },
+	// 	{name: 'John', paid: true },
+	// 	{name: 'Sue', paid: false },
+	// 	{name: 'Bob', paid: true }
+	// ]; 
+
+	//Here we have 2 functions and hawaiianTranslator is passed as
+	//a function to sayIt. This function 'hawaiianTranslator' can then be 
+	//manipulated within sayIt by being assigned to the new variable of
+	//phrase and then given a argument of 'Hello'.
+	//'Aloha' is alerted to the screen. 
+
+	function sayIt(translator) {
+		var phrase = translator('Hello');
+		alert(phrase);
+	}
+
+	function hawaiianTranslator(word){
+		if(word === 'Hello') return 'Aloha';
+		if (word === 'Goodbye') return 'Ceeya';
+	}
+
+	sayIt(hawaiianTranslator);
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>
